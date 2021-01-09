@@ -1,0 +1,146 @@
+<!--pages/wx_epidemic/today/today.wxml-->
+<!--疫情防控平台每日登记页-->
+<view class="bg-img  padding-tb-xl padding" mode="widthFix" style="background-image: url('https://api.sliber.cn/images/banner0508-1.jpg');height: 350rpx;">
+</view>
+
+<form bindsubmit="formSubmit">
+	<view class="cu-form-group">
+		<view class="title text-black text-bold">您的姓名</view>
+		<input name="name" placeholder="请输入姓名" value="{{name}}"></input>
+	</view>
+	<view class="cu-form-group">
+		<view class="title text-black text-bold">手机号码</view>
+		<input type="number" name="phone" maxlength="11" placeholder="能立即联系您的手机号码" value="{{phone}}"></input>
+	</view>
+	<view class="cu-form-group">
+		<view class="title text-black text-bold">您的学号</view>
+		<input type="number" name="sid" maxlength="8" placeholder="请输入您的学号" value="{{sid}}"></input>
+	</view>
+
+	<view class="cu-form-group">
+		<view class="title text-black text-bold">您的班级</view>
+		<input type="number" name="clas"  maxlength="6" placeholder="如 182402" value="{{clas}}"></input>
+	</view>
+
+	<view class="cu-form-group">
+		<view class="title text-black text-bold">您的年级</view>
+		<input name="grade" placeholder="请输入您所在年级 如 2017级" value="{{grade}}"></input>
+	</view>
+	<view class="cu-form-group">
+		<view class="title text-black text-bold">所在学院</view>
+		<picker bindchange="PickerChange" value="{{index}}" range="{{picker1}}">
+			<view class="picker">
+				{{index?picker[index]:'计算机工程学院'}}
+			</view>
+		</picker>
+	</view>
+	<view class="cu-form-group">
+		<view class="title text-black text-bold">所在专业</view>
+		<input name="major" placeholder="如：软件工程(嵌入式) 填写全称" value="{{major}}"></input>
+	</view>
+
+	<view class="cu-form-group">
+		<view class="title text-black text-bold">辅导员</view>
+		<input name="counselor_name" placeholder="请输入辅导员的姓名" value="{{counselor_name}}"></input>
+	</view>
+
+
+
+	<view class="cu-form-group">
+		<view class="title text-black text-bold">宿舍楼号/单元号</view>
+		<input name="dormitory" placeholder="宿舍楼号-单元号" value="{{dormitory}}"></input>
+	</view>
+
+	<view class="cu-form-group">
+		<view class="title text-black text-bold">宿舍号</view>
+		<input name="dormitory_no" placeholder="请输入您的宿舍号" value="{{dormitory_no}}"></input>
+	</view>
+
+ <view class="cu-form-group">
+		<view class="title text-black text-bold">是否本人为中、高风险地区人员</view>
+		<input name="is_danger_region" placeholder="是/否" value="{{is_danger_region==null?'否':is_danger_region}}"></input>
+	</view>
+
+  <view class="cu-form-group">
+		<view class="title text-black text-bold">是否接触过中高风险地区人员</view>
+		<input name="is_touch_danger_region" placeholder="是/否" value="{{is_touch_danger_region==null?'否':is_touch_danger_region}}"></input>
+	</view>
+
+  <view class="cu-form-group">
+		<view class="title text-black text-bold">是否到达过中高风险地区</view>
+		<input name="is_arrive_danger_region" placeholder="是/否" value="{{is_arrive_danger_region==null?'否':is_arrive_danger_region}}"></input>
+	</view>
+
+  <view class="cu-form-group">
+		<view class="title text-black text-bold">是否接触过确诊或疑似病人</view>
+		<input name="is_touch_patient" placeholder="是/否" value="{{is_touch_patient==null?'否':is_touch_patient}}"></input>
+	</view>
+
+  <view class="cu-form-group">
+		<view class="title text-black text-bold">是否有发热/咳嗽/呼吸困难等症状</view>
+		<input name="is_illness" placeholder="是/否" value="{{is_illness==null?'否':is_illness}}"></input>
+	</view>
+
+  <view class="cu-form-group">
+		<view class="title text-black text-bold">共同居住人身体状况</view>
+		<input name="living_together" placeholder="正常、[发热、咳嗽、呼吸困难等症状]、确诊、疑似、其他" value="{{living_together==null?'正常':living_together}}"></input>
+	</view>
+
+  <view class="cu-form-group">
+		<view class="title text-black text-bold">是否有家庭成员或亲戚被隔离</view>
+		<input name="is_relative_quarantine" placeholder="是否有家庭成员或亲戚被隔离" value="{{is_relative_quarantinen==null?'否':is_relative_quarantine}}"></input>
+	</view>
+
+ <view class="cu-form-group">
+		<view class="title text-black text-bold">是否接触过境外人员</view>
+		<input name="is_touch_outlands" placeholder="是否接触过境外人员" value="{{is_touch_outlandsn==null?'否':is_touch_outlands}}"></input>
+	</view>
+
+
+	<!--学生体温-->
+	<view class="cu-form-group">
+		<view class="title text-black text-bold" style="font-size:50rpx">晚间体温</view>
+		<input style="font-size:36rpx;color:orange;font-weight:bold;" type="digit" placeholder-style="font-size:36rpx;color:orange;"  placeholder="输入此时此刻您的体温😘" name="temperature" focus></input>
+	</view>
+
+	<!--提交按钮-->
+	<view class=" cu-form-group padding-xl flex flex-direction">
+		<button class="cu-btn round bg-green shadow lg" role="button" aria-disabled="false" formType="submit">提交打卡</button>
+	</view>
+</form>
+	<!-- 页底版权 -->
+  <copyright></copyright>
+<!-- 提示窗口 -->
+<view class="cu-modal {{modalName=='Modal'?'show':''}}">
+	<view class="cu-dialog">
+		<view class="cu-bar bg-white justify-end">
+			<view class="content">提示</view>
+			<view class="action" bindtap="hideModal">
+				<text class="icon-close text-red"></text>
+			</view>
+		</view>
+		<view class="padding-xl">
+			{{info}}
+		</view>
+	</view>
+</view>
+
+<!-- 回显对话窗口 -->
+<view class="cu-modal {{modalName=='DialogModal1'?'show':''}}">
+	<view class="cu-dialog">
+		<view class="cu-bar bg-white justify-end">
+			<view class="content">提示</view>
+			<view class="action" bindtap="hideModal">
+				<text class="icon-close text-red"></text>
+			</view>
+		</view>
+		<view class="padding-xl">
+			{{info}}
+		</view>
+		<view class="cu-bar bg-white justify-end">
+			<view class="action">
+				<button class="cu-btn bg-green margin-left" bindtap="hideModal">确定</button>
+			</view>
+		</view>
+	</view>
+</view>

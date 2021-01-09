@@ -1,0 +1,21 @@
+{
+    "pages": [
+      "pages/wx_epidemic/guide/guide",
+      "pages/wx_epidemic/noonPunch/noonPunch",
+      "pages/wx_epidemic/eveningPunch/eveningPunch",
+      "pages/wx_epidemic/moringPunch/moringPunch",
+        "pages/wx_epidemic/information/information",
+        "pages/wx_epidemic/index/index",
+        
+        "pages/wx_epidemic/history/history"
+        
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "WeChat",
+        "navigationBarTextStyle": "black"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

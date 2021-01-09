@@ -1,0 +1,172 @@
+<!--pages/wx_epidemic/information/information.wxml-->
+<!--疫情防控平台学生基础资料查看-->
+
+<!--动态波浪GIF-->
+<view class="bg-img  padding-tb-xl padding " mode="widthFix" style="background-image: url('https://api.sliber.cn/images/banner0508-3.jpg');height: 300rpx;">
+</view>
+
+<!--基础资料-->
+<view class="student-information">
+	<view class="cu-form-group">
+		<text class="icon-friendfill text-cyan"></text>
+		<view class="title inform-content text-black text-bold">学生姓名</view>
+		<text class="information-text">{{name}}</text>
+		<input disabled="disabled"></input>
+	</view>
+	<view class="cu-form-group">
+		<text class="icon-phone text-cyan"></text>
+		<view class="title inform-content text-black text-bold">手机号码</view>
+		<text class="information-text">{{phone}}</text>
+		<input disabled="disabled"></input>
+	</view>
+	<view class="cu-form-group">
+		<text class="icon-edit text-cyan"></text>
+		<view class="title inform-content text-black text-bold">学生学号</view>
+		<text class="information-text">{{sid}}</text>
+		<input disabled="disabled"></input>
+	</view>
+
+	<view class="cu-form-group">
+		<text class="icon-taxi text-cyan"></text>
+		<view class="title inform-content text-black text-bold">所在年级</view>
+		<text class="information-text">{{grade}}</text>
+		<input disabled="disabled"></input>
+	</view>
+
+
+	<view class="cu-form-group">
+		<text class="icon-discover text-cyan"></text>
+		<view class="title inform-content text-black text-bold">学生班级</view>
+		<text class="information-text">{{clas}}</text>
+		<input disabled="disabled"></input>
+	</view>
+	<view class="cu-form-group">
+		<text class="icon-home text-cyan"></text>
+		<view class="title inform-content text-black text-bold">所在学院</view>
+		<text class="information-text">{{college}}</text>
+		<input disabled="disabled"></input>
+	</view>
+
+	<view class="cu-form-group">
+		<text class="icon-new text-cyan"></text>
+		<view class="title inform-content text-black text-bold">所在专业</view>
+		<text class="information-text">{{major}}</text>
+		<input disabled="disabled"></input>
+	</view>
+
+<view class="cu-form-group">
+		<text class="icon-new text-cyan"></text>
+		<view class="title inform-content text-black text-bold">辅导员姓名</view>
+		<text class="information-text">{{counselor_name}}</text>
+		<input disabled="disabled"></input>
+	</view>
+
+	<view class="cu-form-group">
+		<text class="icon-samefill text-cyan"></text>
+		<view class="title inform-content text-black text-bold">宿舍楼号-单元号</view>
+		<text class="information-text">{{dormitory}}</text>
+		<input disabled="disabled"></input>
+	</view>
+
+
+	<view class="cu-form-group">
+		<text class="icon-addressbook text-cyan"></text>
+		<view class="title inform-content text-black text-bold">宿舍号</view>
+		<text class="information-text">{{dormitory_no}}</text>
+		<input disabled="disabled"></input>
+	</view>
+
+
+
+</view>
+<view class="aboutUs cu-btn round lg shadow bg-yellow" bindtap="editInfo">编辑信息</view>
+	<!-- 页底版权 -->
+  <copyright></copyright>
+<!-- 编辑模态框内容 -->
+<view class="cu-modal {{modalName=='editModal1'?'show':''}}">
+	<view class="cu-dialog">
+		<view class="cu-bar bg-white justify-end">
+			<view class="content">编辑信息</view>
+			<view class="action" bindtap="hideModal">
+				<text class="icon-close text-red"></text>
+			</view>
+		</view>
+		<view class="padding">
+			<form bindsubmit="formPreserve">
+				<view class="cu-form-group">
+					<view class="title">您的姓名</view>
+					<input name="name" placeholder="请输入您的姓名"></input>
+				</view>
+				<view class="cu-form-group">
+					<view class="title">手机号码</view>
+					<input type="number" maxlength="11" name="phone" placeholder="请输入手机号码"></input>
+				</view>
+				<view class="cu-form-group">
+					<view class="title">您的学号</view>
+					<input type="number" name="sid" maxlength="8" placeholder="请输入您的学号"></input>
+				</view>
+
+				<view class="cu-form-group">
+					<view class="title">所在班级</view>
+					<input type="number" name="clas" maxlength="6" placeholder="请输入班级号 如182402"></input>
+				</view>
+
+				<view class="cu-form-group">
+					<view class="title">所在年级</view>
+					<input type="number" maxlength="4" name="grade" placeholder="如 2018"></input>
+				</view>
+				<view class="cu-form-group">
+					<view class="title">所在学院</view>
+					<picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+						<view class="picker">
+							{{index?picker[index]:'计算机工程学院'}}
+						</view>
+					</picker>
+				</view>
+				<view class="cu-form-group">
+					<view class="title">所在专业</view>
+					<input name="major" placeholder-style="font-size:24rpx" placeholder="如 软件工程（嵌入式）填写全称"></input>
+				</view>
+
+				<view class="cu-form-group">
+					<view class="title">辅导员姓名</view>
+					<input name="counselor_name" placeholder="请输入辅导员的姓名"></input>
+				</view>
+
+				<view class="cu-form-group">
+					<view class="title">宿舍楼号-单元号</view>
+					<input name="dormitory" placeholder="如：6号楼"></input>
+				</view>
+
+				<view class="cu-form-group">
+					<view class="title">宿舍号码</view>
+					<input name="dormitory_no" placeholder="请输入宿舍号"></input>
+				</view>
+
+				<view class="cu-bar bg-white justify-end">
+					<view class="action">
+						<button class="cu-btn line-green text-green" bindtap="hideModal">取消</button>
+						<button class="cu-btn bg-green margin-left" formType="submit">保存</button>
+					</view>
+				</view>
+			</form>
+		</view>
+
+	</view>
+</view>
+
+
+<!-- 提示窗口 -->
+<view class="cu-modal {{modalName=='Modal'?'show':''}}">
+	<view class="cu-dialog">
+		<view class="cu-bar bg-white justify-end">
+			<view class="content">提示</view>
+			<view class="action" bindtap="hideModal">
+				<text class="icon-close text-red"></text>
+			</view>
+		</view>
+		<view class="padding-xl">
+			{{info}}
+		</view>
+	</view>
+</view>

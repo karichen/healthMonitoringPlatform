@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kari.mapper.UserMapper">
+<insert id="addInfo" parameterType="com.kari.pojo.User">
+    insert into info (
+    sid,
+    clas,
+    name,
+    grade,
+    college,
+    counselor_name,
+    is_danger_region,
+    is_touch_danger_region,
+    is_arrive_danger_region,
+    is_touch_patient,
+    is_illness,
+    living_together,
+    is_relative_quarantine,
+    is_touch_outlands,
+    create_date)values(
+     #{sid},
+     #{clas},
+     #{name},
+     #{grade},
+     #{college},
+     #{counselorName},
+     #{isDangerRegion},
+     #{isTouchDangerRegion},
+     #{isArriveDangerRegion},
+     #{isTouchPatient},
+     #{isIllness},
+     #{livingTogether},
+     #{isRelativeQuarantine},
+     #{isTouchOutlands},
+     #{createDate}
+    )
+</insert>
+    
+    <select id="queryNum" parameterType="com.kari.pojo.User" resultType="int">
+        select count(*) from info where sid=${sid} and create_date =#{createDate};
+    </select>
+
+    <update id="updateTemperature" parameterType="com.kari.pojo.User">
+        update info set temperature =#{temperature} where sid=${sid} and create_date =#{createDate};
+    </update>
+
+<!--    <update id="updateMorningTemperature" parameterType="com.kari.pojo.User">-->
+<!--        update info set morning_temperature =#{morningTemperature}-->
+<!--    </update>-->
+
+<!--    <update id="updateNoonTemperature" parameterType="com.kari.pojo.User">-->
+<!--        update info set noon_temperature =#{noonTemperature}-->
+<!--    </update>-->
+
+<!--    <update id="updateEveningTemperature" parameterType="com.kari.pojo.User">-->
+<!--        update info set evening_temperature =#{eveningTemperature}-->
+<!--    </update>-->
+
+    <select id="queryUser" parameterType="com.kari.pojo.User" resultType="com.kari.pojo.User">
+        select * from info where sid=${sid} and create_date =#{createDate};
+    </select>
+
+    <select id="queryUserInfoList" parameterType="com.kari.pojo.User" resultType="com.kari.pojo.User">
+        select * from info where  sid =${sid} and date_sub(curdate(), INTERVAL 7 DAY) &lt;= date(`add_time`) ORDER BY add_time DESC
+    </select>
+
+</mapper>

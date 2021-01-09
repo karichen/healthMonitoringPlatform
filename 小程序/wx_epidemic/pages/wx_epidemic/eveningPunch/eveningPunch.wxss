@@ -1,0 +1,3 @@
+/* pages/wx_epidemic/today/today.wxss */
+@import "../../../colorui/animation.wxss";
+@import "../../../colorui/main.wxss";

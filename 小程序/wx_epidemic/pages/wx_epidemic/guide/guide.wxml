@@ -1,0 +1,40 @@
+<!--pages/wx_epidemic/guide/guide.wxml-->
+<!--疫情防控平台使用引导页-->
+<!--动态波浪GIF-->
+
+<swiper class="screen-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+  <swiper-item wx:for="{{swiperList}}" wx:key="this">
+    <image src="{{item.url}}" mode="widthFix" wx:if="{{item.type=='image'}}"></image>
+  </swiper-item>
+</swiper>
+<!--姓名提示-->
+<view class="padding animation-scale-up" style="display: flex;justify-content: center;animation-delay: 0.2s;">
+	<view class="bg-gradual-orange padding text-center shadow-blur school-user">
+		<view class="hello-user">
+			<text class="hello-user-f">
+			{{sid}}{{name}}，欢迎您
+			</text>
+			<text class="hello-user-t">
+			早间打卡时间: 6:00-8:00\n
+      午间打卡时间: 11:00-13:00\n
+	    晚间打卡时间: 19:00-21:00
+			</text>
+			<text bindtap='copyText' data-text="491316691" style="font-size:30rpx;font-weight:bold">
+			仅返校同学填写，未返校同学请勿填写，问题反馈QQ群：491316691（点击复制）
+			</text>
+		</view>
+	</view>
+</view>
+<!--按钮-->
+<view class="grid guide_button" style="padding:6%">
+	<button style="animation-delay: 0.1s;" class="animation-slide-left cu-btn round bg-olive shadow lg " role="button" aria-disabled="false" bindtap="toMonringBtn">早间体温打卡</button>
+  <button style="animation-delay: 0.1s;" class="animation-slide-left cu-btn round bg-olive shadow lg " role="button" aria-disabled="false" bindtap="toNoonBtn">午间体温打卡</button>
+	<button style="animation-delay: 0.2s;" class="animation-slide-right cu-btn round bg-black shadow lg " role="button" aria-disabled="false" bindtap="toEveningBtn">晚间体温打卡</button>
+	<button style="animation-delay: 0.3s;" class="animation-slide-left cu-btn round bg-cyan shadow lg " role="button" aria-disabled="false" bindtap="tohistoryBtn">打卡历史查询</button>
+	<button  style="animation-delay: 0.4s;" class="animation-slide-right cu-btn round bg-orange shadow lg " role="button" aria-disabled="false" bindtap="toinformationBtn">查看个人资料</button>
+</view>
+	<view class="adContainer">
+	<ad unit-id="adunit-81bec7c9156efb72" ad-type="grid" grid-opacity="0.8" grid-count="5" ad-theme="white"></ad>
+	</view>
+	<!-- 页底版权 -->
+  <copyright></copyright>

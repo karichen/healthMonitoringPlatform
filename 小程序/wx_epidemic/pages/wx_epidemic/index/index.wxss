@@ -1,0 +1,22 @@
+/* pages/wx_epidemic/index/index.wxss */
+@import "../../../colorui/animation.wxss";
+.school-view{
+ padding-top: 10%;
+}
+.school-name{
+  display: grid;
+  justify-content: center;
+  color: black;
+  font-size: 70rpx;
+  font-family: kaiti;
+}
+.school-name-use{
+  display: grid;
+  justify-content: center;
+  color: black;
+  font-size: 50rpx;
+  font-family: fangsong;
+}
+.school-button{
+  padding: 20%;
+}

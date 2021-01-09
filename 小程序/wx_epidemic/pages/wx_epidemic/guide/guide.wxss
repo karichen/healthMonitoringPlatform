@@ -1,0 +1,29 @@
+/* pages/wx_epidemic/guide/guide.wxss */
+@import "../../../colorui/animation.wxss";
+@import "../../../colorui/main.wxss";
+.school-user{
+  width: 80%;
+  border-radius: 15rpx;
+}
+.hello-user{
+  color:#fff;
+  font-size:40rpx;
+}
+.hello-user-f{
+  font-weight: bold;
+}
+/* .hello-user-t{
+  line-height: 40rpx;
+} */
+
+.guide_button{
+  display: grid;
+  gap: 30rpx;
+  grid-template-columns: 1fr 1fr;
+}
+.tower-swiper .tower-item {
+  transform: scale(calc(0.5 + var(--index) / 10));
+  margin-left: calc(var(--left) * 100rpx - 150rpx);
+  z-index: var(--index);
+}
+

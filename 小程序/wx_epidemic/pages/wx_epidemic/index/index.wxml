@@ -1,0 +1,28 @@
+<!--pages/wx_epidemic/index/index.wxml-->
+<!--疫情防控平台主页-->
+
+<!--轮播图-->
+<swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#0081ff">
+  <swiper-item wx:for="{{swiperList}}" wx:key class="{{cardCur==index?'cur':''}}">
+    <view class="swiper-item">
+      <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+    </view>
+  </swiper-item>
+</swiper>
+
+<!--动态波浪GIF-->
+<view class="bg-gradual-blue shadow-blur">
+<view class="school-view">
+<text class="school-name">南京邮电大学通达学院</text>
+<text class="school-name-use">体温打卡平台</text>
+</view>
+<!--波浪GIF，这里有问题-->
+  <image src="https://www.dqdxz.xyz/imageList/wave.gif" mode="scaleToFill" class="gif-black response" style="height:100rpx"></image>
+</view>
+
+<!--按钮-->
+<view class="grid" style="padding:15%">
+<button class="cu-btn round lines-cyan shadow lg " role="button" aria-disabled="false" bindtap="guideBtn">学生填报</button>
+<view style="height:120rpx"></view>
+<!-- <button class="cu-btn round lines-blue shadow lg school-button" role="button" aria-disabled="false">辅导员填报</button> -->
+</view>

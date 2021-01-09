@@ -1,0 +1,120 @@
+<!--pages/wx_epidemic/history/history.wxml-->
+<!--疫情防控平台填报记录-->
+
+<!--动态波浪GIF-->
+<view class="top shadow-blur">
+<text class="history-title">近一周填报记录</text>
+<!--波浪GIF，这里有问题-->
+  <image src="https://www.dqdxz.xyz/imageList/wave.gif" mode="scaleToFill" class="gif-black response" style="height:100rpx"></image>
+</view>
+
+<!--索引-->
+<!--DAY-1~2-->
+<view class="VerticalBox">
+  <scroll-view class="VerticalNav nav " scroll-y scroll-with-animation scroll-top="{{VerticalNavTop}}" style="height:calc(100vh - 375rpx)">
+    <view class="cu-item {{index==TabCur?'text-blue cur':''}}"wx:for="{{record}}" wx:key bindtap='tabSelect' data-id="{{index}}" >
+      {{item.createDate}}
+    </view>
+  </scroll-view>
+  <scroll-view class="VerticalMain" scroll-y scroll-with-animation style="height:calc(100vh - 375rpx)" scroll-into-view="main-{{MainCur}}" bindscroll="VerticalMain">
+    <view class="padding-top padding-lr" wx:for="{{record}}" wx:key id="main-{{index}}">
+      <view class="cu-list menu-avatar">
+        
+        <!--学生信息-->
+        <view>
+        <view class="cu-form-group">
+        <view class="title">填报时间:</view>
+        <text>{{item.addTime}}</text>
+        <view></view>
+        </view>
+
+        <view class="cu-form-group">
+        <view class="title">学生姓名:</view>
+        <text>{{item.name}}</text>
+		   <view></view>
+        </view>
+
+        <view class="cu-form-group">
+        <view class="title">学生学号:</view>
+        <text>{{item.sid}}</text>
+		   <view></view>
+        </view>
+
+        <view class="cu-form-group">
+        <view class="title">学生专业:</view>
+        <text >{{item.major}}</text>
+		    <view></view>
+        </view>
+
+        <view class="cu-form-group">
+        <view class="title">辅导员姓名:</view>
+        <text >{{item.counselorName}}</text>
+		    <view></view>
+        </view>
+
+         <view class="cu-form-group">
+        <view class="title">是否本人为中、高风险地区人员:</view>
+        <text >{{item.isDangerRegion}}</text>
+		    <view></view>
+        </view>
+         <view class="cu-form-group">
+        <view class="title">是否接触过中高风险地区人员:</view>
+        <text >{{item.isTouchDangerRegion}}</text>
+		    <view></view>
+        </view>
+         <view class="cu-for-group">
+        <view class="title">是否到达过中高风险地区:</view>
+        <text >{{item.isArriveDangerRegion}}</text>
+		    <view></view>
+        </view>
+         <view class="cu-form-group">
+        <view class="title">是否接触过确诊或疑似病人:</view>
+        <text >{{item.isTouchPatient}}</text>
+		    <view></view>
+        </view>
+         <view class="cu-form-group">
+        <view class="title">是否有发热/咳嗽/呼吸困难等症状:</view>
+        <text >{{item.isIllness}}</text>
+		    <view></view>
+        </view>
+         <view class="cu-form-group">
+        <view class="title">共同居住人身体状况:</view>
+        <text >{{item.livingTogether}}</text>
+		    <view></view>
+        </view>
+         <view class="cu-form-group">
+        <view class="title">是否有家庭成员或亲戚被隔离	:</view>
+        <text >{{item.isRelativeQuarantine}}</text>
+		    <view></view>
+        </view>
+        <view class="cu-form-group">
+        <view class="title">是否接触过境外人员:</view>
+        <text >{{item.isTouchOutlands}}</text>
+		    <view></view>
+        </view>
+
+        <view class="cu-form-group">
+        <view class="title">早间体温:</view>
+        <text>{{item.morningTemperature=="no"?"未填报":item.morningTemperature}}</text>
+		    <view></view>
+        </view>
+
+        <view class="cu-form-group">
+        <view class="title">午间体温:</view>
+        <text>{{item.noonTemperature=="no"?"未填报":item.noonTemperature}}</text>
+		    <view></view>
+        </view>
+
+        <view class="cu-form-group">
+        <view class="title">晚间体温:</view>
+        <text>{{item.eveningTemperature=="no"?"未填报":item.eveningTemperature}}</text>
+		    <view></view>
+        </view>
+        
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+	<!-- 页底版权 -->
+  <copyright></copyright>

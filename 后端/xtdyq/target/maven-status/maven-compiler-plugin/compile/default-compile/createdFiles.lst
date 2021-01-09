@@ -1,0 +1,12 @@
+com\kari\XtdyqApplication.class
+com\kari\pojo\ReturnInfo.class
+com\kari\service\ReturnInfoServiceImpl.class
+com\kari\controller\WebController.class
+com\kari\mapper\ReturnInfoMapper.class
+com\kari\pojo\User.class
+com\kari\mapper\UserMapper.class
+com\kari\service\UserService.class
+com\kari\service\UserServiceImpl.class
+com\kari\pojo\CommonResult.class
+com\kari\util\DateUtil.class
+com\kari\service\ReturnInfoService.class

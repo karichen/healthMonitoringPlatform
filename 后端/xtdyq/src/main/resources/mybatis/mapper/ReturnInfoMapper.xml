@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kari.mapper.ReturnInfoMapper">
+    <insert id="addReturnInfo" parameterType="com.kari.pojo.ReturnInfo">
+    insert into returnInfo (
+     sname,
+     sid,
+     college,
+     grade,
+     clas,
+     counselor_name,
+     now_place,
+     start_city,
+     if_stop_city,
+     return_date,
+     return_time,
+     transportation_type,
+     plate_number,
+     arrive_station,
+     is_health,
+     living_together)values(
+     #{sname},
+     #{sid},
+     #{college},
+     #{grade},
+     #{clas},
+     #{counselorName},
+     #{nowPlace},
+     #{startCity},
+     #{ifStopCity},
+     #{returnDate},
+     #{returnTime},
+     #{transportationType},
+     #{plateNumber},
+     #{arriveStation},
+     #{isHealth},
+     #{livingTogether}
+    )
+</insert>
+
+    <select id="queryReturnInfoBySid" parameterType="String" resultType="com.kari.pojo.ReturnInfo">
+        select * from returnInfo where sid=${sid};
+    </select>
+
+    <select id="queryNum" parameterType="String" resultType="int">
+        select count(*) from returnInfo where sid=${sid};
+    </select>
+
+    <update id="updateReturnInfo" parameterType="com.kari.pojo.ReturnInfo">
+        update returnInfo set
+        sname=#{sname},
+        sid=#{sid},
+        college=#{college},
+        grade=#{grade},
+        clas=#{clas},
+        counselor_name=#{counselorName},
+        now_place=#{nowPlace},
+        start_city=#{startCity},
+        if_stop_city=#{ifStopCity},
+        return_date=#{returnDate},
+        return_time=#{returnTime},
+        transportation_type=#{transportationType},
+        plate_number=#{plateNumber},
+        arrive_station=#{arriveStation},
+        is_health=#{isHealth},
+        living_together=#{livingTogether}
+        where sid=#{sid}
+    </update>
+</mapper>

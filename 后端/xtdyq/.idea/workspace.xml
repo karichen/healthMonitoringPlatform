@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="87d71052-cfb7-4b61-b8c7-f235023eb16d" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="F:/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="F:\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1gOrTg3MPN27KhztnEhOtvzHdlQ" />
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.kari" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\JAVAWeb\Springboot学习\xtdyq\src\main\resources\mybatis\mapper" />
+      <recent name="F:\JAVAWeb\Springboot学习\xtdyq" />
+      <recent name="F:\JAVAWeb\Springboot学习\xtdyq\src\main\java\com\kari\xtdyq" />
+      <recent name="F:\JAVAWeb\Springboot学习\xtdyq\src\main\java\com\kari" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.XtdyqApplication">
+    <configuration name="XtdyqApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="xtdyq" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kari.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kari.xtdyq" />
+      <option name="MAIN_CLASS_NAME" value="com.kari.xtdyq.XtdyqApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="XtdyqApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="xtdyq" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kari.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kari.xtdyq" />
+      <option name="MAIN_CLASS_NAME" value="com.kari.xtdyq.XtdyqApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="XtdyqApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="xtdyq" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kari.XtdyqApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.XtdyqApplicationTests.contextLoads" />
+        <item itemvalue="JUnit.XtdyqApplicationTests" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="87d71052-cfb7-4b61-b8c7-f235023eb16d" name="Default Changelist" comment="" />
+      <created>1597996488176</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1597996488176</updated>
+      <workItem from="1597996491881" duration="2949000" />
+      <workItem from="1597999454752" duration="9419000" />
+      <workItem from="1598021740538" duration="1088000" />
+      <workItem from="1598022838961" duration="2675000" />
+      <workItem from="1598063555663" duration="6060000" />
+      <workItem from="1598155701051" duration="5324000" />
+      <workItem from="1598167375581" duration="3987000" />
+      <workItem from="1598456227772" duration="45000" />
+      <workItem from="1598856648274" duration="19000" />
+      <workItem from="1599912377893" duration="3099000" />
+      <workItem from="1600060812291" duration="3019000" />
+      <workItem from="1600079132258" duration="29000" />
+      <workItem from="1600128425719" duration="7000" />
+      <workItem from="1600259034518" duration="13680000" />
+      <workItem from="1600354936303" duration="35000" />
+      <workItem from="1600591699214" duration="4611000" />
+      <workItem from="1600693349108" duration="644000" />
+      <workItem from="1601001816650" duration="1020000" />
+      <workItem from="1601012250692" duration="722000" />
+      <workItem from="1601028218588" duration="686000" />
+      <workItem from="1601094022928" duration="299000" />
+      <workItem from="1601887324436" duration="546000" />
+      <workItem from="1601966522860" duration="618000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
